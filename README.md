@@ -6,6 +6,9 @@ This script will bind any non-primary GPUs to the vfio-pci driver even if the se
 
 For a tutorial visit: 
 
+Known issues: When generating new initramfs this script produces some IO errors. These are not displayed by default. <br/>
+To view these, run "gpu_passthrough.sh -e".
+
 Sources:<br/>
 vfio-pci-override-vga.sh is a slightly modified version of the script found here:<br/>
 http://vfio.blogspot.com/2015/05/
