@@ -72,7 +72,7 @@ cp vfio-pci-override-vga.sh /etc/initramfs-tools/scripts/init-top/vfio-pci-overr
 
 chmod 744 /etc/initramfs-tools/scripts/init-top/vfio-pci-override-vga.sh
 
-echo "softdep nvidia pre: vfio-pci" >> /etc/modprobe.d/nvidia.conf
+echo "softdep nvidia* pre: vfio-pci" >> /etc/modprobe.d/nvidia.conf
 
 if [ ${1-0} = "-e" ]
 then
