@@ -7,6 +7,12 @@ if [ $EUID -ne 0 ]
 		exit 1
 fi
 
+if [ -a /etc/initramfs-tools/scripts/init-top/vfio-pci-override-vga.sh ]
+	then 
+	echo "Please uninstall Passthrough Helper first! Then run gpu_passthrough.sh again."
+	exit
+fi
+
 VIRT_USER=`logname`
 
 apt install qemu-kvm libvirt-clients libvirt-daemon-system bridge-utils virt-manager ovmf
